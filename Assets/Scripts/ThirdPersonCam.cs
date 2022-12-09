@@ -18,7 +18,6 @@ public class ThirdPersonCam : MonoBehaviour
 
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
-        Vector3 inputDir = orientation.forward * verticalInput * orientation.right * horizontalInput;
-
+        Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
     }
 }
