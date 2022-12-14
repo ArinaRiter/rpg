@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 //эти строчки гарантирют что наш скрипт не завалится если на плеере будет отсутствовать нужные компоненты
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CapsuleCollider))]
-public class Movement : MonoBehaviour
+public class Mooovement : MonoBehaviour
 {
     public float Speed = 0.3f;
     public float JumpForce = 1f;
@@ -54,7 +52,7 @@ public class Movement : MonoBehaviour
 
         //т.к. нам не нужно что бы персонаж мог падать сам по-себе без нашего на то указания.
         //то нужно заблочить поворот по осях X и Z
-        _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
 
         //  Защита от дурака
         if (GroundLayer == gameObject.layer)
