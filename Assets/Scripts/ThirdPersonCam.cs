@@ -5,10 +5,10 @@ using UnityEngine;
 public class ThirdPersonCam : MonoBehaviour
 {
     [Header("References")]
-    public Transform orientation;
-    public Transform player;
-    public Transform playerObj;
-    public Rigidbody rb;
+    [SerializeField] private Transform orientation;
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform playerObj;
+    [SerializeField] private Rigidbody rb;
 
     public float rotationSpeed;
 

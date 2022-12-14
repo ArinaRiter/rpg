@@ -52,7 +52,7 @@ public class Mooovement : MonoBehaviour
 
         //т.к. нам не нужно что бы персонаж мог падать сам по-себе без нашего на то указания.
         //то нужно заблочить поворот по осях X и Z
-        _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
+        _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 
         //  Защита от дурака
         if (GroundLayer == gameObject.layer)
@@ -70,6 +70,11 @@ public class Mooovement : MonoBehaviour
         // т.к. мы сейчас решили использовать физическое движение снова,
         // мы убрали и множитель Time.fixedDeltaTime
         _rb.AddForce(_movementVector * Speed, ForceMode.Impulse);
+        //if (_movementVector.magnitude >= 0.1f)
+        //{
+        //    float targetAngle = Mathf.Atan2(_movementVector.x, _movementVector.z) * Mathf.Rad2Deg;
+        //    transform.rotation = Quaternion.Euler(0, targetAngle, 0); controller.Move(_movementVector * Speed * Time.deltaTime);
+        //}
     }
 
     private void JumpLogic()
@@ -79,4 +84,5 @@ public class Mooovement : MonoBehaviour
             _rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
     }
+
 }

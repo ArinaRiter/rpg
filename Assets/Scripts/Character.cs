@@ -9,22 +9,26 @@ public class Character : MonoBehaviour
 
     public float Speed = 5f;
     public float JumpForce = 1f;
-    Vector3 movement=new Vector3(0,0,0);
+
+    [SerializeField] float rotationSmoothTime;
+    float currentAngle;
+    float currentAngleVelocity;
     void Start()
     {
         characterController = GetComponent<CharacterController>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
-        characterController.Move(move * Time.deltaTime * Speed);
-        if(movement.magnitude>=0.1f)
+        characterController.Move(move * Speed);
+        if(move.magnitude>=0.1f)
         {
-            float targetAngle = Mathf.Atan2(movement.x, movement.z) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, targetAngle, 0);
-            characterController.Move(movement * Speed * Time.deltaTime);
+            float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
+            currentAngle = Mathf.SmoothDampAngle(currentAngle, targetAngle, ref currentAngleVelocity, rotationSmoothTime);
+            transform.rotation = Quaternion.Euler(0, currentAngle, 0);
+
         }
         
     }
