@@ -11,6 +11,7 @@ public class Character : MonoBehaviour
     public float JumpForce = 1f;
 
     [SerializeField] float rotationSmoothTime;
+    [SerializeField] private Camera _camera;
     float currentAngle;
     float currentAngleVelocity;
     void Start()
@@ -21,6 +22,8 @@ public class Character : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 moveDirection = _camera.transform.TransformDirection(move);
+        move = moveDirection;
 
         characterController.Move(move * Speed);
         if(move.magnitude>=0.1f)
