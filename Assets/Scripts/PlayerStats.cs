@@ -117,7 +117,7 @@ public class PlayerStats : MonoBehaviour
                 if (death == true)
                 {
                     if (GUI.Button(new Rect(Screen.width/2,Screen.height/2,100,50), "ещё раз"))
-                        Application.LoadLevel(0);
+                        Application.LoadLevel(2);
                 }
             }
         }
