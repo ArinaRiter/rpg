@@ -222,7 +222,6 @@ Transform:
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
->>>>>>> parent of e80b271 (12)
 --- !u!1 &79236398
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,9 +306,7 @@ Transform:
 <<<<<<< HEAD
   m_LocalPosition: {x: 19.92, y: 2.13, z: -4.6400003}
 =======
->>>>>>> parent of e80b271 (12)
-  m_LocalPosition: {x: 2.76, y: 2.13, z: -5.4300003}
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
+
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
