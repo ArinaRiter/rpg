@@ -593,8 +593,6 @@ Transform:
   m_LocalRotation: {x: 0.06326475, y: 0.000000017700406, z: -0.0000000011220597, w: 0.9979968}
 =======
   m_LocalRotation: {x: 0.06326473, y: 0.000000017700406, z: -0.0000000011220592, w: 0.9979968}
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -607,7 +605,6 @@ Transform:
 --- !u!1 &597047066
 =======
 --- !u!1 &640768307
->>>>>>> parent of e80b271 (12)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -626,7 +623,6 @@ GameObject:
   - component: {fileID: 640768308}
   m_Layer: 0
   m_Name: Points
->>>>>>> parent of e80b271 (12)
   m_TagString: Points
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,7 +632,6 @@ GameObject:
 --- !u!4 &597047067
 =======
 --- !u!4 &640768308
->>>>>>> parent of e80b271 (12)
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -876,7 +871,6 @@ NavMeshAgent:
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &661668267
->>>>>>> parent of e80b271 (12)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -894,7 +888,6 @@ GameObject:
   - component: {fileID: 661668271}
   - component: {fileID: 661668270}
   - component: {fileID: 661668269}
->>>>>>> parent of e80b271 (12)
   m_Layer: 0
   m_Name: Point (2)
   m_TagString: Points
@@ -906,7 +899,6 @@ GameObject:
 --- !u!4 &774608894
 =======
 --- !u!4 &661668268
->>>>>>> parent of e80b271 (12)
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -934,7 +926,6 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &661668269
->>>>>>> parent of e80b271 (12)
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -958,7 +949,6 @@ SphereCollider:
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &661668270
->>>>>>> parent of e80b271 (12)
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -968,7 +958,6 @@ MeshRenderer:
   m_GameObject: {fileID: 774608893}
 =======
   m_GameObject: {fileID: 661668267}
->>>>>>> parent of e80b271 (12)
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1008,7 +997,6 @@ MeshRenderer:
 --- !u!33 &774608897
 =======
 --- !u!33 &661668271
->>>>>>> parent of e80b271 (12)
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1309,7 +1297,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918826896}
->>>>>>> parent of e80b271 (12)
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1102044776
 GameObject:
@@ -1772,7 +1759,6 @@ MonoBehaviour:
 --- !u!1 &1317884865
 =======
 --- !u!1 &1328956588
->>>>>>> parent of e80b271 (12)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1796,7 +1782,6 @@ GameObject:
   m_Layer: 0
   m_Name: TestWall
   m_TagString: Untagged
->>>>>>> parent of e80b271 (12)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1807,7 +1792,6 @@ Transform:
 =======
 --- !u!65 &1328956589
 BoxCollider:
->>>>>>> parent of e80b271 (12)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1831,7 +1815,6 @@ SphereCollider:
   m_GameObject: {fileID: 1317884865}
 =======
   m_GameObject: {fileID: 1328956588}
->>>>>>> parent of e80b271 (12)
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -1844,7 +1827,6 @@ SphereCollider:
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1328956590
->>>>>>> parent of e80b271 (12)
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1854,7 +1836,6 @@ MeshRenderer:
   m_GameObject: {fileID: 1317884865}
 =======
   m_GameObject: {fileID: 1328956588}
->>>>>>> parent of e80b271 (12)
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1894,7 +1875,6 @@ MeshRenderer:
 --- !u!33 &1317884869
 =======
 --- !u!33 &1328956591
->>>>>>> parent of e80b271 (12)
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1922,7 +1902,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> parent of e80b271 (12)
 --- !u!1 &1436396180
 GameObject:
   m_ObjectHideFlags: 3
@@ -2057,8 +2036,6 @@ MonoBehaviour:
 --- !u!1 &1562601003
 =======
 --- !u!1 &1525374056
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2091,8 +2068,6 @@ GameObject:
   m_Layer: 0
   m_Name: TestWallObstacle
   m_TagString: Untagged
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2104,8 +2079,6 @@ GameObject:
 --- !u!4 &1562601004
 =======
 --- !u!4 &1525374057
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2148,8 +2121,6 @@ SphereCollider:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1525374058
 BoxCollider:
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2168,7 +2139,6 @@ BoxCollider:
 --- !u!23 &1562601006
 =======
   m_GameObject: {fileID: 1525374056}
->>>>>>> parent of e80b271 (12)
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -2181,8 +2151,6 @@ BoxCollider:
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1525374059
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2195,8 +2163,6 @@ MeshRenderer:
   m_GameObject: {fileID: 1562601003}
 =======
   m_GameObject: {fileID: 1525374056}
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -2239,8 +2205,6 @@ MeshRenderer:
 --- !u!33 &1562601007
 =======
 --- !u!33 &1525374060
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2256,8 +2220,6 @@ MeshFilter:
 =======
   m_GameObject: {fileID: 1525374056}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
 --- !u!1 &1565293184
 GameObject:
   m_ObjectHideFlags: 3
@@ -2470,8 +2432,6 @@ MonoBehaviour:
 --- !u!1 &1755361179
 =======
 --- !u!1 &1866184217
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2501,9 +2461,7 @@ GameObject:
   - component: {fileID: 1866184219}
   m_Layer: 0
   m_Name: TestWallObstacle
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
   m_TagString: Untagged
->>>>>>> parent of e80b271 (12)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2515,7 +2473,6 @@ GameObject:
 --- !u!65 &1755361180
 =======
 --- !u!4 &1866184218
->>>>>>> parent of e80b271 (12)
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2550,9 +2507,7 @@ GameObject:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1866184219
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
 BoxCollider:
->>>>>>> parent of e80b271 (12)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2598,8 +2553,6 @@ SphereCollider:
   m_GameObject: {fileID: 1755361179}
 =======
   m_GameObject: {fileID: 1866184217}
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -2615,8 +2568,6 @@ SphereCollider:
 --- !u!23 &1755361181
 =======
 --- !u!23 &1866184220
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2629,7 +2580,6 @@ MeshRenderer:
   m_GameObject: {fileID: 1755361179}
 =======
   m_GameObject: {fileID: 1866184217}
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -2647,7 +2597,6 @@ MeshRenderer:
   - {fileID: 2100000, guid: 73a1dea6aaee8e54a9f8eacf6fc10944, type: 2}
 =======
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2673,7 +2622,6 @@ MeshRenderer:
 --- !u!33 &1755361182
 =======
 --- !u!33 &1866184221
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2793,7 +2741,6 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802554428}
->>>>>>> parent of e80b271 (12)
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -2833,7 +2780,6 @@ MeshRenderer:
 --- !u!33 &1890745213
 =======
 --- !u!33 &1802554432
->>>>>>> parent of e80b271 (12)
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3139,8 +3085,6 @@ MeshFilter:
 =======
   m_GameObject: {fileID: 1866184217}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> c15ca8232785134bcc3f10f5098066adb3cf7925
->>>>>>> parent of e80b271 (12)
 --- !u!1 &1987331115
 GameObject:
   m_ObjectHideFlags: 0
