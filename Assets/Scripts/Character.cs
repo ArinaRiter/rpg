@@ -6,12 +6,9 @@ using UnityEngine.UIElements;
 public class Character : MonoBehaviour
 {
     private CharacterController characterController;
-    private float ySpeed; //a
-    private float originalStepOffset;
 
     public float Speed = 5f;
     public float JumpForce = 1f;
-    public float jumpSpeed; //a
 
     [SerializeField] float rotationSmoothTime;
     [SerializeField] private Camera _camera;
@@ -20,7 +17,6 @@ public class Character : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        originalStepOffset = characterController.stepOffset;
     }
 
     void FixedUpdate()
@@ -29,24 +25,7 @@ public class Character : MonoBehaviour
         Vector3 moveDirection = _camera.transform.TransformDirection(move);
         move = moveDirection;
 
-        ySpeed += Physics.gravity.y * Time.deltaTime;//a
-        if (characterController.isGrounded)//a
-        {
-            characterController.stepOffset = originalStepOffset;
-            ySpeed = -0.5f;//a
-            if (Input.GetButtonDown("Jump"))//a
-            {
-                ySpeed = jumpSpeed;
-            }
-        }
-        else//a
-        {
-            characterController.stepOffset = 0;
-        }
-
-        Vector3 velocity = move * Speed;//a
-        velocity.y = ySpeed;
-        characterController.Move(velocity*Time.deltaTime);
+        characterController.Move(move * Speed);
         if(move.magnitude>=0.1f)
         {
             float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
