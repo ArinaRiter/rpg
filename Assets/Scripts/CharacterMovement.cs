@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Character : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
     private CharacterController characterController;
     private float ySpeed; //a
@@ -46,15 +46,15 @@ public class Character : MonoBehaviour
 
         Vector3 velocity = move * Speed;//a
         velocity.y = ySpeed;
-        characterController.Move(velocity*Time.deltaTime);
-        if(move.magnitude>=0.1f)
+        characterController.Move(velocity * Time.deltaTime);
+        if (move.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
             currentAngle = Mathf.SmoothDampAngle(currentAngle, targetAngle, ref currentAngleVelocity, rotationSmoothTime);
             transform.rotation = Quaternion.Euler(0, currentAngle, 0);
 
         }
-        
+
     }
-    
+
 }
