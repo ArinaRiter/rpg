@@ -1,71 +1,64 @@
 using UnityEngine;
 using System.Collections;
-using stats; //Используем пространство stats
+using stats; 
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    public Stats stats = new Stats(1, 600, 20, 20, 20); //Объявляем новый объект Stats
-    public static bool death; //Глобальная переменная отвечающа нам жив ли персонаж
-    int pointstat = 0; //кол-во поинтов дающихся при повышении
-    int showstat = 0; //Отображать ли окно со статами
-    public float curHP; //кол-во жизней персонаж нынешние
-    public float curMP; //кол-во маны персонажа
-    public float curEXP; //кол-во опыта
+    public Stats stats = new Stats(1, 600, 20, 20, 20); 
+    public static bool death; 
+    int pointstat = 0; 
+    int showstat = 0; 
+    public float curHP; 
+    public float curMP; 
+    public float curEXP; 
 
     void Start()
     {
-        death = false; //По умолчанию персонаж жив
-        Time.timeScale = 1; //Игра работает
-        curHP = stats.HP; //В начале у персонажа кол-во жизней максимально
-        curMP = stats.MP; //маны тоже
+        death = false; 
+        Time.timeScale = 1; 
+        curHP = stats.HP; 
+        curMP = stats.MP; 
     }
 
     void Update()
     {
-        if (curHP > stats.HP) //если кол-во жизни будет выше максимального кол-ва жизней
-            curHP = stats.HP; //Уравниваем их
-        if (curHP <= 0) //Если кол-во жизни меньше или равно 0
+        if (curHP > stats.HP) 
+            curHP = stats.HP; 
+        if (curHP <= 0) 
         {
-            curHP = 0; //Ставим 0 дабы наш бар не рисовался не корректно
-            death = true; //Ставим что персонаж мертв
-            Time.timeScale = 0; //Останавливаем игру
+            curHP = 0; 
+            death = true; 
+            Time.timeScale = 0; 
         }
-        if (curMP < 0) //Если кол-во маны ниже 0
-            curMP = 0; //Ставим 0
-        if (curMP > stats.MP) //если кол-во маны больше максимального кол-ва
-            curMP = stats.MP;//уравниваем
+        if (curMP < 0) 
+            curMP = 0; 
+        if (curMP > stats.MP) 
+            curMP = stats.MP;
 
-        if (showstat == 0) //Если окно со статами не отображается
+        if (showstat == 0) 
         {
-            if (Input.GetKeyDown(KeyCode.P)) //Принажатии на клавишу P
-                showstat = 1; //окно со статами будет отображаться
+            if (Input.GetKeyDown(KeyCode.P)) 
+                showstat = 1; 
         }
-        else if (showstat == 1) //если окно со статами отображается
+        else if (showstat == 1) 
         {
-            if (Input.GetKeyDown(KeyCode.P)) //При нажатии на клавишу P
-                showstat = 0; //Окно исчезнет
-        }
-
-      
-        else //если не одето
-        {
-            stats.minATKweapon = 0; //ставим значения в 0
-            stats.maxATKweapon = 0;
-            stats.newdmg(); //соответственно атака у нас 0
+            if (Input.GetKeyDown(KeyCode.P)) 
+                showstat = 0; 
         }
 
-        if (curEXP >= stats.EXP) //Если количество опыта у нас рано и ли больше нужного кол-ва опыта
+        if (curEXP >= stats.EXP)
         {
-            stats.lvlUP(); //повышаем уровень
-            curEXP = 0; //кол-во опыта ставим 0
-            pointstat += 5; //Добавляем очки статов
+            stats.lvlUP(); 
+            curEXP = 0; 
+            pointstat += 5; 
         }
     }
     void OnGUI()
     {
-        if (showstat == 1) //если статы отображаются
+        if (showstat == 1) 
         {
-            //Рисуем наши статы
+            
             GUI.Box(new Rect(10, 70, 300, 300), "stats");
             GUI.Label(new Rect(10, 95, 300, 300), "LvL: " + stats.lvl);
             GUI.Label(new Rect(10, 110, 300, 300), "hp: " + stats.HP);
@@ -77,10 +70,10 @@ public class PlayerStats : MonoBehaviour
             GUI.Label(new Rect(10, 200, 300, 300), "minDMG: " + stats.minDMG);
             GUI.Label(new Rect(10, 215, 300, 300), "maxDMG: " + stats.maxDMG);
 
-            if (pointstat > 0) //если очков статов больше 0 делаем кнопки для повышения статов
+            if (pointstat > 0) 
             {
                 GUI.Label(new Rect(10, 250, 300, 20), "points " + pointstat.ToString());
-                if (GUI.Button(new Rect(150, 155, 20, 20), "+")) //Для силы
+                if (GUI.Button(new Rect(150, 155, 20, 20), "+")) 
                 {
                     if (pointstat > 0)
                     {
@@ -89,7 +82,7 @@ public class PlayerStats : MonoBehaviour
                         stats.newdmg();
                     }
                 }
-                if (GUI.Button(new Rect(150, 170, 20, 20), "+")) //Для живучести
+                if (GUI.Button(new Rect(150, 170, 20, 20), "+")) 
                 {
                     if (pointstat > 0)
                     {
@@ -98,7 +91,7 @@ public class PlayerStats : MonoBehaviour
                         stats.newhp();
                     }
                 }
-                if (GUI.Button(new Rect(150, 185, 20, 20), "+")) //Для маны
+                if (GUI.Button(new Rect(150, 185, 20, 20), "+")) 
                 {
                     if (pointstat > 0)
                     {
@@ -110,12 +103,12 @@ public class PlayerStats : MonoBehaviour
             }
         }
         else if (showstat == 0)
-            useGUILayout = false; //Скрываем окно статов
-        if (death == true) //Если умерли
+            useGUILayout = false; 
+        if (death == true) 
         {
-            if (GUI.Button(new Rect(Screen.width / 2, Screen.height / 2, 100, 50), "Переиграть")) //Ресуем кнопку переиграть
+            if (GUI.Button(new Rect(Screen.width / 2, Screen.height / 2, 100, 50), "Переиграть")) 
             {
-                Application.LoadLevel(0);
+                SceneManager.LoadScene(0);
             }
         }
     }
