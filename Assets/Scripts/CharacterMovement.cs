@@ -11,8 +11,11 @@ public class CharacterMovement : MonoBehaviour
     private float originalStepOffset;
 
     public float Speed = 5f;
+    public float sprintSpeed = 7f;
     public float JumpForce = 1f;
     public float jumpSpeed; //a
+
+    public KeyCode sprintKey = KeyCode.LeftShift;
 
     [SerializeField] float rotationSmoothTime;
     [SerializeField] private Camera _camera;
@@ -50,14 +53,26 @@ public class CharacterMovement : MonoBehaviour
         Vector3 Velocity = moveDirection * magnitude;//b
         Velocity.y = ySpeed;
         characterController.Move(Velocity * Time.deltaTime);
-        if (move.magnitude>=0.1f)
+        if (move.magnitude >= 0.1f)
         {
+            if (Input.GetKey(sprintKey))
+            {
+
+                Speed = sprintSpeed;
+            }
+            else
+            {
+                Speed = 5f;
+            }
             float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
             currentAngle = Mathf.SmoothDampAngle(currentAngle, targetAngle, ref currentAngleVelocity, rotationSmoothTime);
             transform.rotation = Quaternion.Euler(0, currentAngle, 0);
 
+
+
         }
-        
+
+
     }
-    
+
 }

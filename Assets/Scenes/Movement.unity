@@ -716,8 +716,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  sprintSpeed: 10
   JumpForce: 5
   jumpSpeed: 5
+  sprintKey: 304
   rotationSmoothTime: 0.1
   _camera: {fileID: 982906386}
 --- !u!114 &1010345751
