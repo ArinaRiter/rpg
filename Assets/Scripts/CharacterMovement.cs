@@ -45,9 +45,11 @@ public class CharacterMovement : MonoBehaviour
             characterController.stepOffset = 0;
         }
 
-        Vector3 velocity = move * Speed;//a
-        velocity.y = ySpeed;
-        characterController.Move(velocity * Time.deltaTime);
+        float magnitude = Mathf.Clamp01(moveDirection.magnitude) * Speed;//b
+        //Vector3 velocity = move * Speed;//a
+        Vector3 Velocity = moveDirection * magnitude;//b
+        Velocity.y = ySpeed;
+        characterController.Move(Velocity * Time.deltaTime);
         if (move.magnitude>=0.1f)
         {
             float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
