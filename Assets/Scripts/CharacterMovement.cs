@@ -16,6 +16,7 @@ public class CharacterMovement : MonoBehaviour
     public float jumpSpeed; //a
 
     public KeyCode sprintKey = KeyCode.LeftShift;
+    public KeyCode jumpKey = KeyCode.Space;
 
     [SerializeField] float rotationSmoothTime;
     [SerializeField] private Camera _camera;
@@ -38,10 +39,14 @@ public class CharacterMovement : MonoBehaviour
         {
             characterController.stepOffset = originalStepOffset;
             ySpeed = -0.5f;//a
-            if (Input.GetButtonDown("Jump"))//a
+            if (Input.GetKey(jumpKey))
             {
                 ySpeed = jumpSpeed;
             }
+            //if (Input.GetButtonDown("Jump"))//a
+            //{
+            //    ySpeed = jumpSpeed;
+            //}
         }
         else//a
         {
