@@ -13,13 +13,13 @@ public class EnemyAI : MonoBehaviour
 
     //patrolling
 
-    //public Vector3 walkPoint;
-    //bool walkPointSet;
-    //public float walkPointRange;
+    //public Vector3 walkPoint;//
+    //bool walkPointSet;//
+    //public float walkPointRange;//
 
     //attacking vse dela
-    public float timeBetweenAttacks;
-    bool alreadyAttacked;
+    //public float timeBetweenAttacks;//
+    //bool alreadyAttacked;//
 
     //states
     public float sightRange, attackRange;
@@ -37,8 +37,8 @@ public class EnemyAI : MonoBehaviour
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsGround);
 
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
-        //if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        //if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        //if (playerInSightRange && !playerInAttackRange) ChasePlayer();//
+        //if (playerInAttackRange && playerInSightRange) AttackPlayer();//
 
     }
 
@@ -47,7 +47,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Patrolling()
     {
-        //if (!walkPointSet) SearchWalkPoint();
+        //if (!walkPointSet) SearchWalkPoint();//
 
         //if (walkPointSet)
         //    agent.SetDestination(walkPoint);

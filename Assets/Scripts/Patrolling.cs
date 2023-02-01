@@ -17,6 +17,7 @@ public class Patrolling : MonoBehaviour
     public PlayerStats playerStats;
 
     public Transform player;
+    //public Transform enemy;
 
     //private float distance;
     //distance = Vector3.Distance(Enemy.transform.position, player.transform.position);
@@ -42,6 +43,8 @@ public class Patrolling : MonoBehaviour
         //agent to go to the currently selected destination.
         agent.destination = points[destPoint].position;
 
+        t/*ransform.rotation = enemy * Quaternion.Euler(0, 180, 0);*/
+
         // choose the next point in the array as the destinatio
         //cycle to the start if net pointov
         destPoint = (destPoint + 1) % points.Length;
@@ -63,6 +66,7 @@ public class Patrolling : MonoBehaviour
         //{
         //    AttackPlayer();
         //}
+
     }
 
     //[SerializeField]
