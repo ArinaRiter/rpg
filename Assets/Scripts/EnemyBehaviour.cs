@@ -6,7 +6,7 @@
 //{
 //    private CharacterController _enemyAI;
 //    private Player _playerScript;
-//    public Transform player;
+//    public Transform _player;
 
 //    [SerializeField]
 //    private float _speed;
@@ -16,7 +16,7 @@
 //    void Awake()
 //    {
 //        _enemyAI = GetComponent<CharacterController>();
-//        player = GameObject.Find("Player").transform;
+//        _player = GameObject.Find("Player").transform;
 
 //    }
 
@@ -37,6 +37,6 @@
 
 //        velocity.y = _enemiesVelocity;
 //        velocity.Normalize();
-//        transform.rotation = Quaternion.LookRotation(transform.position - player.position);
+//        transform.rotation = Quaternion.LookRotation(transform.position - _player.position);
 //    }
 //}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackBehaviour : StateMachineBehaviour
 {
-    Transform player;
+    public Transform player;
     public PlayerStats playerStats;
 
     

@@ -22,7 +22,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 784bff8df2ffe1a459379103246d0a61, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -104,19 +104,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isChasing
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isAttacking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3b16911073cb446a391c97128ba2ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   playerStats: {fileID: 0}
 --- !u!1102 &2861557794363473737
 AnimatorState:
@@ -338,7 +339,7 @@ AnimatorStateMachine:
     m_Position: {x: -10, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6188072743751681411}
-    m_Position: {x: 230, y: 50, z: 0}
+    m_Position: {x: 120, y: 50, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

@@ -20,7 +20,7 @@ public class Patrolling : MonoBehaviour
     //public Transform enemy;
 
     //private float distance;
-    //distance = Vector3.Distance(Enemy.transform.position, player.transform.position);
+    //distance = Vector3.Distance(Enemy.transform.position, _player.transform.position);
 
     void Start()
     {
@@ -43,7 +43,7 @@ public class Patrolling : MonoBehaviour
         //agent to go to the currently selected destination.
         agent.destination = points[destPoint].position;
 
-        t/*ransform.rotation = enemy * Quaternion.Euler(0, 180, 0);*/
+        /*ransform.rotation = enemy * Quaternion.Euler(0, 180, 0);*/
 
         // choose the next point in the array as the destinatio
         //cycle to the start if net pointov
@@ -59,8 +59,8 @@ public class Patrolling : MonoBehaviour
 
         //if (distance < 10f && distance>2f)
         //{
-        //    agent.SetDestination(player.position);
-        //    transform.rotation = Quaternion.LookRotation(transform.position - player.position);
+        //    agent.SetDestination(_player.position);
+        //    transform.rotation = Quaternion.LookRotation(transform.position - _player.position);
         //}
         //if (distance<2f)
         //{
@@ -73,8 +73,8 @@ public class Patrolling : MonoBehaviour
     //private float timeBetweenAttacks;
     //private void AttackPlayer()
     //{
-    //    agent.SetDestination(player.position);
-    //    transform.rotation = Quaternion.LookRotation(transform.position - player.position);
+    //    agent.SetDestination(_player.position);
+    //    transform.rotation = Quaternion.LookRotation(transform.position - _player.position);
     //    if (!alreadyAttacked)
     //    {
     //        playerStats.curHP -= 1;

@@ -27,7 +27,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform; //player NAMEEEE
+        player = GameObject.Find("Player").transform; //_player NAMEEEE
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -88,7 +88,7 @@ public class EnemyAI : MonoBehaviour
 
     //private void ChasePlayer()
     //{
-    //    agent.SetDestination(player.position);
+    //    agent.SetDestination(_player.position);
     //}
 
     //private void AttackPlayer()
@@ -96,7 +96,7 @@ public class EnemyAI : MonoBehaviour
     //    //enemy doesnt move !!!111!!
     //    agent.SetDestination(transform.position);
 
-    //    transform.rotation = Quaternion.LookRotation(transform.position - player.position);
+    //    transform.rotation = Quaternion.LookRotation(transform.position - _player.position);
 
 //        if (!alreadyAttacked)
 //        {
