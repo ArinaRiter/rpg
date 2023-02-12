@@ -18,7 +18,7 @@ public class AttackBehaviour : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
        
-        animator.transform.LookAt(player);
+        //animator.transform.LookAt(player);
         float distance = Vector3.Distance(animator.transform.position, player.position);
         
         if (distance > 3)
