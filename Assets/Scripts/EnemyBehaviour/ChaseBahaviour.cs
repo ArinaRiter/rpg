@@ -20,7 +20,8 @@ public class ChaseBahaviour : StateMachineBehaviour
     
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        agent.SetDestination(player.position);
+        //agent.SetDestination(player.position);
+        agent.destination = player.position;
         float distance = Vector3.Distance(animator.transform.position, player.position);
         if (distance < attackRange)
         {

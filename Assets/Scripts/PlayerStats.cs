@@ -11,14 +11,17 @@ public class PlayerStats : MonoBehaviour
     int showstat = 0; 
     public float curHP; 
     public float curMP; 
-    public float curEXP; 
+    public float curEXP;
+    public float curDamage;
 
     void Start()
     {
         death = false; 
         Time.timeScale = 1; 
         curHP = stats.HP; 
-        curMP = stats.MP; 
+        curMP = stats.MP;
+        curDamage = stats.damage;
+        
     }
 
     void Update()

@@ -15,6 +15,7 @@ namespace stats
         public int energy = 20;
         public int minATKweapon =10;
         public int maxATKweapon = 10;
+        public int damage = 10; /// /////////////////////
         public int minDMG;
         public int maxDMG;
 
