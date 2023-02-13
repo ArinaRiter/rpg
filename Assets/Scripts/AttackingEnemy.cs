@@ -15,11 +15,6 @@ public class AttackingEnemy : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("player").transform;
-        //NPC = GameObject.FindGameObjectWithTag("Enemy").transform;
-        NPC = this.gameObject;
-        dist = Vector3.Distance(NPC.position, player.position);
-
-
     }
 
     public GameObject FindClosestEnemy()
@@ -40,14 +35,19 @@ public class AttackingEnemy : MonoBehaviour
             }
         }
         return closest;
+        NPC = closest.transform;
     }
 
     void Update()
     {
+        //NPC = GameObject.FindGameObjectWithTag("Enemy").transform;
+        //NPC = this.gameObject;      
+        FindClosestEnemy();
+        dist = Vector3.Distance(NPC.position, player.position);
 
 
 
-            if ((dist < attackDist) && (Input.GetMouseButtonDown(0)))
+        if ((dist < attackDist) && (Input.GetMouseButtonDown(0)))
         {
             //npc.curHP -= playerstats.curDamage;
             npc.curHP -= dmg;
