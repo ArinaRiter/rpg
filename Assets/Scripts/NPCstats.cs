@@ -25,6 +25,11 @@ public class NPCstats : MonoBehaviour
     }
     private void Death()
     {
-        Destroy(GameObject.FindWithTag("NPC"));
+        //Destroy(GameObject.FindWithTag("Enemy"));
+        //Destroy(Gameobject.Find(name));
+        if (curHP == 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

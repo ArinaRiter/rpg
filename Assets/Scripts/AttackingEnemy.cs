@@ -15,16 +15,48 @@ public class AttackingEnemy : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("player").transform;
-        NPC = GameObject.FindGameObjectWithTag("NPC").transform;
+        //NPC = GameObject.FindGameObjectWithTag("Enemy").transform;
+        NPC = this.gameObject;
         dist = Vector3.Distance(NPC.position, player.position);
+
+
+    }
+
+    public GameObject FindClosestEnemy()
+    {
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject closest = null;
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = go;
+                distance = curDistance;
+            }
+        }
+        return closest;
     }
 
     void Update()
     {
-        if ((Input.GetMouseButtonDown(0))&&(dist<attackDist))
+
+
+
+            if ((dist < attackDist) && (Input.GetMouseButtonDown(0)))
         {
             //npc.curHP -= playerstats.curDamage;
             npc.curHP -= dmg;
         }
+        else if ((Input.GetMouseButtonDown(0)))
+        {
+            Debug.Log("aaaaa");
+        }
     }
+
+    
 }
