@@ -5,7 +5,8 @@ public class NPCstats : MonoBehaviour
 {
     public EnStats enstats = new EnStats(10, 50, 2);
     public float curHP;
-    public static bool death;
+    public bool death;
+    public Loot loot;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class NPCstats : MonoBehaviour
         if (curHP == 0)
         {
             Destroy(this.gameObject);
+            loot.Drop();
         }
     }
 }

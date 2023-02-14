@@ -10,6 +10,7 @@ public class Item : ScriptableObject
     public int value;
     public string description;
     public Sprite icon;
+    //public int dropChance;
     public Dictionary<string, int> stats = new Dictionary<string, int>();
     public Item(int id, string itemName, string description, /*Sprite icon,*/ Dictionary<string, int> stats)
     {
