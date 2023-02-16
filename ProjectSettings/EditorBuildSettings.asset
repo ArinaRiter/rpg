@@ -11,9 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Movement.unity
     guid: 997d16ae913545144bf616689779cb82
-  - enabled: 1
-    path: Assets/Scenes/EnemyScene.unity
-    guid: 7464d210e759fac42bb1a4a470c88352
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
