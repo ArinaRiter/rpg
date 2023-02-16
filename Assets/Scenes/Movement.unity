@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -648,6 +648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcstats: {fileID: 292589148}
+  ae: {fileID: 292589153}
   vectorEnemy: {x: 0, y: 0, z: 0}
   enemy: {fileID: 292589146}
   loot: {fileID: 1936242755795896, guid: 80aa7b6ee7c96b04eb9f62384a27fd57, type: 3}
@@ -3953,7 +3954,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644426031}
-  m_LocalRotation: {x: 0.20098671, y: -0.000000031371187, z: 0.0000000064365353, w: 0.979594}
+  m_LocalRotation: {x: 0.20098674, y: 0.000000011482653, z: -0.0000000023559357, w: 0.979594}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4382,7 +4383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curHP: 50
   death: 0
-  loot: {fileID: 0}
+  loot: {fileID: 1777182214}
 --- !u!114 &1777182214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4396,6 +4397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcstats: {fileID: 1777182213}
+  ae: {fileID: 1777182212}
   vectorEnemy: {x: 0, y: 0, z: 0}
   enemy: {fileID: 1777182203}
   loot: {fileID: 1936242755795896, guid: 80aa7b6ee7c96b04eb9f62384a27fd57, type: 3}
@@ -4600,7 +4602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curHP: 50
   death: 0
-  loot: {fileID: 0}
+  loot: {fileID: 1894115757}
 --- !u!114 &1894115757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4614,6 +4616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcstats: {fileID: 1894115756}
+  ae: {fileID: 1894115755}
   vectorEnemy: {x: 0, y: 0, z: 0}
   enemy: {fileID: 1894115748}
   loot: {fileID: 1936242755795896, guid: 80aa7b6ee7c96b04eb9f62384a27fd57, type: 3}

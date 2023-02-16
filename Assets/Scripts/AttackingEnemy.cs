@@ -56,7 +56,7 @@ public class AttackingEnemy : MonoBehaviour
                 //npc.curHP -= playerstats.curDamage;
                 npc.curHP -= dmg;
             }
-            else if ((Input.GetMouseButtonDown(0)))
+            else if ((Input.GetMouseButtonDown(0)) && !(dist < attackDist))
             {
                 Debug.Log("aaaaa");
             }

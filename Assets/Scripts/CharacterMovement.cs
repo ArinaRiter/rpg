@@ -11,7 +11,7 @@ public class CharacterMovement : MonoBehaviour
     private float originalStepOffset;
 
     public float Speed = 5f;
-    public float sprintSpeed = 7f;
+    public float sprintSpeed = 8f;
     public float JumpForce = 1f;
     public float jumpSpeed; //a
 

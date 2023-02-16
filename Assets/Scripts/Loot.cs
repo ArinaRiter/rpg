@@ -6,6 +6,9 @@ public class Loot : MonoBehaviour
 {
     private float rndm;
     public NPCstats npcstats;
+    public AttackingEnemy ae;
+    //public Transform closestEnemy;
+
     public Vector3 vectorEnemy;
     public GameObject enemy;
     //public GameObject drop;
@@ -13,15 +16,20 @@ public class Loot : MonoBehaviour
     void Start()
     {
         rndm = Random.Range(1,101);
-        enemy = GameObject.FindWithTag("Enemy");
+        //enemy = GameObject.FindWithTag("Enemy");
         vectorEnemy = enemy.transform.position;
+
+
     }
 
-    //void Update()
-    //{
-    //    if (npcstats.death == true)
-    //        Drop();
-    //}
+    void Update()
+    {
+        if (GameObject.FindWithTag("Enemy"))
+        {
+            //closestEnemy = ae.FindClosestEnemy().transform.position;
+            vectorEnemy = ae.FindClosestEnemy().transform.position;
+        }
+    }
     public void Drop()
     {
         //Object.Instantiate(ScriptableObject.CreateInstance("Coins"), vectorEnemy, Quaternion.identity);
