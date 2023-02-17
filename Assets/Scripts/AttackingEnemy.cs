@@ -12,13 +12,13 @@ public class AttackingEnemy : MonoBehaviour
     public NPCstats npc;
     public PlayerStats playerstats;
     public int dmg = 5;
-    public Slider slider;
-    public GameObject healthBarUI;
+    //public Slider slider;
+    //public GameObject healthBarUI;
     //public KeyCode attackKey = KeyCode.R;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("player").transform;
-        slider.value = CalculateHealth();
+        //slider.value = CalculateHealth();
     }
 
     public GameObject FindClosestEnemy()
@@ -65,18 +65,18 @@ public class AttackingEnemy : MonoBehaviour
                 Debug.Log("aaaaa");
             }
         }
-        slider.value = CalculateHealth();
-        if (npc.curHP < 50) 
-        {
-            healthBarUI.SetActive(true);
-        }
+        //slider.value = CalculateHealth();
+        //if (npc.curHP < 50) 
+        //{
+        //    healthBarUI.SetActive(true);
+        //}
 
 
     }
-    float CalculateHealth()
-    {
-        return npc.curHP / 50;
-    }
+    //float CalculateHealth()
+    //{
+    //    return npc.curHP / 50;
+    //}
 
 
 }

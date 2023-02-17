@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 public class NPCstats : MonoBehaviour
 {
     public EnStats enstats = new EnStats(10, 50, 2);
     public float curHP;
     public bool death;
     public Loot loot;
+    public Slider slider;
+    public NPCstats npc;
+    public GameObject healthBarUI;
+    public Vector3 maincam;
 
     void Start()
     {
         curHP = enstats.hitPoints;
+        slider.value = CalculateHealth();
     }
     void Update()
     {
@@ -23,6 +29,14 @@ public class NPCstats : MonoBehaviour
         }
         if (death == true)
             Death();
+
+        slider.value = CalculateHealth();
+        if (npc.curHP < 50)
+        {
+            healthBarUI.SetActive(true);
+        }
+        maincam = GameObject.FindWithTag("MainCamera").transform.position;
+        transform.LookAt(maincam);
     }
     private void Death()
     {
@@ -33,5 +47,9 @@ public class NPCstats : MonoBehaviour
             Destroy(this.gameObject);
             loot.Drop();
         }
+    }
+    float CalculateHealth()
+    {
+        return npc.curHP / 50;
     }
 }
