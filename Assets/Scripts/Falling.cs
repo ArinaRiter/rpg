@@ -5,6 +5,7 @@ using UnityEngine;
 public class Falling : MonoBehaviour
 {
     public GameObject player;
+    public PlayerStats playerstats ;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class Falling : MonoBehaviour
     {
         if (player.transform.position.y < -10)
         {
-
+            playerstats.curHP = 0;
         }
     }
 }
