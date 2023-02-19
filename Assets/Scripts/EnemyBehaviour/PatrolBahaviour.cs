@@ -28,7 +28,7 @@ public class PatrolBahaviour : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        if (agent != null && agent.remainingDistance <= agent.stoppingDistance)
         {
             agent.SetDestination(points[Random.Range(0, points.Count)].position);
         }

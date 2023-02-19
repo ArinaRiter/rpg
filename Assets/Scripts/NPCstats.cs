@@ -12,6 +12,7 @@ public class NPCstats : MonoBehaviour
     public NPCstats npc;
     public GameObject healthBarUI;
     public Vector3 maincam;
+    public PlayerStats playerstats;
 
     void Start()
     {
@@ -45,6 +46,7 @@ public class NPCstats : MonoBehaviour
         if (curHP == 0)
         {
             Destroy(this.gameObject);
+            playerstats.curEXP += 200;
             loot.Drop();
         }
     }
